@@ -86,13 +86,12 @@ target_ip   = ""
 count       = 86400
 verbose     = 1
 wait        = 1
-options,arg = getopt.getopt(sys.argv[1:],":c:w:vri:I:nhq")
+options,arg = getopt.getopt(sys.argv[1:],":c:w:vri:I:nh")
 
 for opt in options:
   if( opt[0] == '-c' ): count     = int(opt[1])
   if( opt[0] == '-I' ): ifce      = opt[1]
   if( opt[0] == '-v' ): verbose   = 1
-  if( opt[0] == '-q' ): verbose   = 0
   if( opt[0] == '-r' ): verbose   = -1
   if( opt[0] == '-w' ): wait      = int(opt[1])
   if( opt[0] == '-h' ): usage(0)
